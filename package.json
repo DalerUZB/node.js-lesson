@@ -1,0 +1,20 @@
+{
+  "name": "lesson-1",
+  "version": "1.0.0",
+  "description": "lesson",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DalerUZB/node.js-lesson.git"
+  },
+  "author": "Daler Abdullayev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DalerUZB/node.js-lesson/issues"
+  },
+  "homepage": "https://github.com/DalerUZB/node.js-lesson#readme"
+}
