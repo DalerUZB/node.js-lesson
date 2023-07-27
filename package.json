@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "lesson",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "dev": "npx nodemon index.js"
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/DalerUZB/node.js-lesson/issues"
   },
-  "homepage": "https://github.com/DalerUZB/node.js-lesson#readme"
+  "homepage": "https://github.com/DalerUZB/node.js-lesson#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "dedent-js": "^1.0.1"
+  }
 }

@@ -12,7 +12,7 @@ const getArgs = (args) => {
       }
     }
   });
-  return res
+  return res;
 };
 
-module.exports = getArgs;
+export default getArgs;
