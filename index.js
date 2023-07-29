@@ -4,11 +4,15 @@ import {
   printSucces,
   printHelper,
 } from "./services/log.service.js";
-import { saveKeyValue } from "./services/storage.servise.js";
+import { saveKeyValue, TOKEN_DICTIONARY } from "./services/storage.servise.js";
 
 const saveToken = async (token) => {
+  if (!token.length) {
+    printError(`Token does\`nt exist`)
+    return
+  }
   try {
-    await saveKeyValue('token', token)
+    await saveKeyValue(TOKEN_DICTIONARY.token, token)
     printSucces('Tokken was saved')
   } catch (error) {
     printError(error.message)
@@ -17,8 +21,7 @@ const saveToken = async (token) => {
 
 const startCLI = () => {
   const args = getArgs(process.argv);
-  console.log(args);
-  
+
 
   if (args.h) {
     //help
