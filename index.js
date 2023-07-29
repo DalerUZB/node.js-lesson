@@ -1,4 +1,5 @@
 import getArgs from "./helpers/args.js";
+import { getWeather } from "./services/api.services.js";
 import {
   printError,
   printSucces,
@@ -22,7 +23,6 @@ const saveToken = async (token) => {
 const startCLI = () => {
   const args = getArgs(process.argv);
 
-
   if (args.h) {
     //help
     printHelper();
@@ -34,6 +34,7 @@ const startCLI = () => {
     //token
     return saveToken(args.t)
   }
+  getWeather('tashkent')
 };
 
 startCLI();
