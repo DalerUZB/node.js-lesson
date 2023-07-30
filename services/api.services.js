@@ -3,6 +3,7 @@ import https from 'https'
 import { TOKEN_DICTIONARY, getKeyValue } from './storage.servise.js'
 import axios from 'axios'
 const token = process.env.TOKEN ?? await getKeyValue(TOKEN_DICTIONARY.token)
+
 const getWeather = async (city) => {
     if (!token) {
         throw new Error('API does`nt exist, -t [API_KEY] for saving token')
@@ -18,4 +19,5 @@ const getWeather = async (city) => {
 
     console.log(data);
 }
+
 export { getWeather }
